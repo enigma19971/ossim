@@ -21,7 +21,7 @@ class ossimInfoFactoryInterface;
 class ossimInfoBase;
 class ossimFilename;
 
-class OSSIM_DLL ossimInfoFactoryRegistry
+class OSSIMDLLEXPORT ossimInfoFactoryRegistry
 {
 public:
    

@@ -66,7 +66,7 @@ extern "C"
    }
 
    /* Note symbols need to be exported on windoze... */ 
-   OSSIM_PLUGINS_DLL void ossimSharedLibraryInitialize(
+   /*__declspec(dllexport)*/ void ossimSharedLibraryInitialize(
                ossimSharedObjectInfo** info, 
                const char* options)
    {    
@@ -105,7 +105,7 @@ extern "C"
   }
 
    /* Note symbols need to be exported on windoze... */ 
-  OSSIM_PLUGINS_DLL void ossimSharedLibraryFinalize()
+   /*__declspec(dllexport)*/ void ossimSharedLibraryFinalize()
   {
      ossimImageHandlerRegistry::instance()->
         unregisterFactory(ossimGdalFactory::instance());
