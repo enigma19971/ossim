@@ -1,0 +1,47 @@
+#acquisitionDate, #description, #location, #securityClassification, #title
+{
+	width: 100%;
+}
+
+body
+{
+	height: 100%;
+	margin: 0;
+	overflow-y: hidden;
+	padding: 0;
+	width: 100%
+}
+
+#center
+{
+	height: 100%;
+	overflow-x: auto;
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+}
+
+#countryCode, #exportPreviewUrl, #gradientGeneratorUrl, #imageResourceLocation, #jsColorImagesDirectory, #loading, #preview, #templateStatus
+{
+	display: none;
+}
+
+#footer
+{
+	bottom: 0;
+	height: 20px;
+	position: absolute;
+	width: 100%;
+}
+
+#header
+{
+	position: relative;
+	top: 0;
+	width: 100%;
+}
+
+#headerFooterGradient
+{
+	background-repeat: repeat-x;
+}

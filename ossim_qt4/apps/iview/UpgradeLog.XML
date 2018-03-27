@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="iview">
+</Property><Property Name="解决方案文件" Value="D:\3rdPart\ALL_SOURCE\ossim\ossim_qt4\apps\iview\iview.sln">
+</Property><Property Name="Date" Value="2013年7月12日">
+</Property><Property Name="Time" Value="17:50:26">
+</Property></Properties><Event ErrorLevel="0" Project="iview" Source="iview.vcproj" Description="Converting project file 'D:\3rdPart\ALL_SOURCE\ossim\ossim_qt4\apps\iview\iview.vcproj'.">
+</Event><Event ErrorLevel="1" Project="iview" Source="iview.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="iview" Source="iview.vcproj" Description="MSB8012: $(TargetPath) ('D:\3rdPart\ALL_SOURCE\ossim\ossim_qt4\apps\iview\.\iview.exe') does not match the Linker's OutputFile property value '..\..\bin\iview.exe' ('D:\3rdPart\ALL_SOURCE\ossim\ossim_qt4\bin\iview.exe') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="iview" Source="iview.vcproj" Description="MSB8012: $(TargetPath) ('D:\3rdPart\ALL_SOURCE\ossim\ossim_qt4\apps\iview\.\iview.exe') does not match the Linker's OutputFile property value '..\..\bin\Debug\iview.exe' ('D:\3rdPart\ALL_SOURCE\ossim\ossim_qt4\bin\Debug\iview.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="iview" Source="iview.vcproj" Description="Done converting to new project file 'D:\3rdPart\ALL_SOURCE\ossim\ossim_qt4\apps\iview\iview.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="iview" Source="iview.vcproj" Description="Converted">
+</Event></UpgradeLog>

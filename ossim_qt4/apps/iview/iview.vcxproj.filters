@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="iview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\qrc_app.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_app.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\images\alignbottom.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\alignleft.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\alignright.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\aligntop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\connection.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\dataextract.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\datastore.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\display.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\editcopy.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\editcut.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\editpaste.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\filenew.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\fileopen.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\filesave.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\fingerup.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\histogram.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\ImageLinkerSplash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\iviewsplash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\pan.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\print.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\redo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\resetproperty.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\searchfind.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\Splash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\tilecascade.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\undo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\images\zoom.png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\app.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
