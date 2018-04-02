@@ -301,7 +301,6 @@ ossimProjection* ossimEpsgProjectionDatabase::findProjection(ossim_uint32 epsg_c
       merc_proj->setPcsCode(900913);
       proj = merc_proj;
    }
-
    else
    {
       // Search database for entry:

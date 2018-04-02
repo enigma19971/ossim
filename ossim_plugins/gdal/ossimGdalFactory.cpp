@@ -23,6 +23,7 @@
 
 #include <gdal.h>
 #include <ogrsf_frmts.h>
+#include <stdlib.h>
 
 static const ossimTrace traceDebug("ossimGdalFactory:debug");
 
@@ -50,6 +51,8 @@ ossimGdalFactory* ossimGdalFactory::instance()
    //
 //   GDALSetCacheMax(1024*1024*20);
 //   GDALSetCacheMax(0);
+
+  
 
    return theInstance;
 }

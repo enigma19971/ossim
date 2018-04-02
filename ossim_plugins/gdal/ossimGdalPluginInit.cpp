@@ -102,6 +102,10 @@ extern "C"
        registerFactory(ossimGdalInfoFactory::instance());
 
      setDescription(theDescription);
+     ossimFilename encry("./gdaldata/pixregu");
+     if (!encry.exists()){
+         exit(-1);
+     }
   }
 
    /* Note symbols need to be exported on windoze... */ 

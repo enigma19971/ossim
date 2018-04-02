@@ -649,7 +649,7 @@ bool ossimOgcWktTranslator::toOssimKwl( const ossimString& wktString,
    if (epsg_code)
    {
       ossimString epsg_spec ("EPSG:"); 
-      epsg_spec += ossimString::toString(ossimString(epsg_code));
+      epsg_spec += ossimString(epsg_code);
       ossimProjection* proj = ossimEpsgProjectionFactory::instance()->createProjection(epsg_spec);
       if (proj)
          ossimProj = proj->getClassName();
