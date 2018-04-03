@@ -262,6 +262,7 @@ public:
    virtual bool isIndexedData() const;
 
    bool getGeoTransform(double*  geoTransform);
+   std::string getWKT();
    
 private:
 
@@ -337,7 +338,7 @@ private:
    bool                        m_preservePaletteIndexesFlag;
    vector<ossim_uint32>        m_outputBandList;
    bool                        m_isBlocked;
-
+   mutable char*               theWKT;
    std::vector<ossimAppFixedTileCache::ossimAppFixedCacheId> m_rlevelBlockCache;
   
 TYPE_DATA

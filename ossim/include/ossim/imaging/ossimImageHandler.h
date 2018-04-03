@@ -641,7 +641,13 @@ public:
   ossimPixelType getPixelType() const { return thePixelType; }
 
 
-  virtual bool getGeoTransform(double*  geoTransform){return false;}
+  virtual bool getGeoTransform(double*  geoTransform){
+      return false;
+  }
+
+  virtual std::string getWKT(){
+      return "";
+  }
 
 protected:
    

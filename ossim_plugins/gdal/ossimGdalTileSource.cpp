@@ -75,6 +75,7 @@ ossimGdalTileSource::ossimGdalTileSource()
       theSubDatasets(),
       theIsComplexFlag(false),
       theAlphaChannelFlag(false),
+      theWKT(0L),
       m_preservePaletteIndexesFlag(false),
       m_outputBandList(0),
       m_isBlocked(false)
@@ -1108,6 +1109,7 @@ ossimRefPtr<ossimImageGeometry> ossimGdalTileSource::getInternalImageGeometry() 
    
    // Projection Reference
    const char* wkt = GDALGetProjectionRef( theDataset );
+   theWKT = (char*)wkt;
    ossim_uint32 gcpCount = GDALGetGCPCount(theDataset);
    if(!ossimString(wkt).empty() && gcpCount < 4)
    {
@@ -2537,3 +2539,10 @@ std::string ossimGdalTileSource::getProjectionInfo(ossimMapProjection* mapProj){
         return wktString;
     }
 };
+
+std::string ossimGdalTileSource::getWKT(){
+    if (!theWKT){
+        theWKT = (char*)GDALGetProjectionRef(theDataset);
+    }
+    return theWKT;
+}
