@@ -80,11 +80,11 @@ extern "C"
 
       /* Register the readers... */
      ossimImageHandlerRegistry::instance()->
-        registerFactory(ossimGdalFactory::instance(), ossimString(kwl.find("read_factory.location")).downcase() == "front" );
+        registerFactory(ossimGdalFactory::instance(), true/*ossimString(kwl.find("read_factory.location")).downcase() == "front"*/ );
 
      /* Register the writers... */
      ossimImageWriterFactoryRegistry::instance()->
-        registerFactory(ossimGdalImageWriterFactory::instance(), ossimString(kwl.find("writer_factory.location")).downcase() == "front" );
+        registerFactory(ossimGdalImageWriterFactory::instance(), true/*ossimString(kwl.find("writer_factory.location")).downcase() == "front"*/ );
 
      /* Register the overview builder factory. */
      ossimOverviewBuilderFactoryRegistry::instance()->
