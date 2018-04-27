@@ -11,3 +11,5 @@
 7. change gdal to version 1.11.0.  the precompiled gdal1.11.4 has too much extern 3rdpart lib
 
 8. change ossimcore and ossimgdal_plugin to static lib.   using OSSIM_STATIC macro.   2018.3.27
+
+8. ossmiscalarfilter is modified.   remove null pixel.   2018.4.27

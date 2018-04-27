@@ -476,7 +476,8 @@ template <class T> void ossimScaleFilter::runHorizontalFilterTemplate(
                for(kernelIdx = 0; kernelIdx < (int)kernel.size(); ++kernelIdx)
                {
                   if((*xptr != np)&&
-                     (kernel[kernelIdx] != 0.0))
+                     (kernel[kernelIdx] != 0.0)&&
+                     (*(xptr+kernelIdx) != np))
                   {
                      result  += ((double)(*(xptr+kernelIdx))*kernel[kernelIdx]);
                      density += kernel[kernelIdx];
