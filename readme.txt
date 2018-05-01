@@ -13,3 +13,5 @@
 8. change ossimcore and ossimgdal_plugin to static lib.   using OSSIM_STATIC macro.   2018.3.27
 
 8. ossmiscalarfilter is modified.   remove null pixel.   2018.4.27
+
+9. gdaltileSource  use mmap in windows. 2018.5.1

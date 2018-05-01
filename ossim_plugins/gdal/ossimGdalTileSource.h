@@ -16,6 +16,7 @@
 #ifndef ossimGdalTileSource_HEADER
 #define ossimGdalTileSource_HEADER 1
 
+#include <Windows.h>
 #include <ossim/imaging/ossimImageHandler.h>
 #include "../ossimPluginConstants.h"
 #include <ossim/base/ossimConstants.h>
@@ -25,6 +26,8 @@
 #include <gdal.h>
 #include <vector>
 #include <ossim/imaging/ossimAppFixedTileCache.h>
+
+//#define BIG_MEM_MODE 1
 
 class ossimImageData;
 
@@ -340,7 +343,9 @@ private:
    bool                        m_isBlocked;
    mutable char*               theWKT;
    std::vector<ossimAppFixedTileCache::ossimAppFixedCacheId> m_rlevelBlockCache;
-  
+   /*add mmap support xiex */
+   bool theBigMemoryFlag;
+   unsigned char* theMapAddress;
 TYPE_DATA
 };
 

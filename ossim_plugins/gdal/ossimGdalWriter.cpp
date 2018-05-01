@@ -89,12 +89,10 @@ bool ossimGdalWriter::open()
 {
    theDriverName = convertToDriverName(theOutputImageType);
    theDriver = GDALGetDriverByName(theDriverName.c_str());
-
    if(theDriver)
    {
       return true;
    }
-
    return false;
 }
 
@@ -172,6 +170,7 @@ bool ossimGdalWriter::saveState(ossimKeywordlist& kwl,
    }
    
    return ossimImageFileWriter::saveState(kwl, prefix);
+
 }
 
 /*!
@@ -407,15 +406,14 @@ bool ossimGdalWriter::writeFile()
          GDALDataType gdalType = getGdalDataType(theInputConnection->
                                                  getOutputScalarType());
          ossim_uint32 bandCount = theInputConnection->getNumberOfOutputBands();
-				 
-         theDataset = GDALCreate( theDriver ,
-                                  theFilename.c_str(),
-                                  (int)theAreaOfInterest.width(),
-                                  (int)theAreaOfInterest.height(),
-                                  (int)bandCount,
-                                  gdalType,
-                                  theGdalDriverOptions);
 
+         GDALCreate(theDriver,
+             theFilename.c_str(),
+             (int)theAreaOfInterest.width(),
+             (int)theAreaOfInterest.height(),
+             (int)bandCount,
+             gdalType,
+             theGdalDriverOptions);
          // ESH 09/2009 -- If no raster bands do block write.
          int nRasterBands = GDALGetRasterCount( theDataset );
 
