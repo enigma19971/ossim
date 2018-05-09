@@ -343,9 +343,6 @@ private:
    bool                        m_isBlocked;
    mutable char*               theWKT;
    std::vector<ossimAppFixedTileCache::ossimAppFixedCacheId> m_rlevelBlockCache;
-   /*add mmap support xiex */
-   bool theBigMemoryFlag;
-   unsigned char* theMapAddress;
 TYPE_DATA
 };
 

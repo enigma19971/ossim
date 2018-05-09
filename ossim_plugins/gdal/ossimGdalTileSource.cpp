@@ -78,9 +78,8 @@ ossimGdalTileSource::ossimGdalTileSource()
       theWKT(0L),
       m_preservePaletteIndexesFlag(false),
       m_outputBandList(0),
-      m_isBlocked(false),
-      theBigMemoryFlag(false),
-      theMapAddress(0L)
+      m_isBlocked(false)
+     
 {
    // Pick up any default settings from preference file if set.
    getDefaults();
@@ -96,12 +95,6 @@ ossimGdalTileSource::~ossimGdalTileSource()
 
 void ossimGdalTileSource::close()
 {
-    if (theBigMemoryFlag && theMapAddress){
-        std::string virtualName = std::string("/vsimem/") + theImageFile.file().string();
-        VSIUnlink(virtualName.c_str());
-        delete[] theMapAddress;
-        theMapAddress = 0;
-    }
     if (theDataset){
         GDALClose(theDataset);
         theDataset = 0;
@@ -161,37 +154,8 @@ bool ossimGdalTileSource::open()
       // Note:  Cannot feed GDALOpen a NULL string!
       if (theImageFile.size())
       {
-          FILE *fp = fopen(theImageFile.c_str(), "rb");
-          fseek(fp, 0, SEEK_END);
-          fpos_t pos;
-          fgetpos(fp, &pos);
-          fseek(fp, 0, SEEK_SET);
-         /*get the file's size*/
-          size_t avaiMem = getAvailableMemory();
-          if (pos < 0.7 * avaiMem){
-               theMapAddress = new unsigned char[pos];
-               if (!theMapAddress){
-                  return false;
-               }
-               int bksz = 64 * 1024 * 1024;
-               size_t bytes = pos;
-               unsigned char* p = theMapAddress;
-               while (bytes > 0){
-                   long long t = (bytes > bksz) ? bksz : bytes;
-                   fread(p, t, 1, fp);
-                   bytes -= t;
-                   p += t;
-               }
-               fclose(fp);
-               std::string virtualName = std::string("/vsimem/") + theImageFile.file().string();
-               VSIFCloseL(VSIFileFromMemBuffer(virtualName.c_str(), theMapAddress,pos, FALSE));
-               theDataset = GDALOpen(virtualName.c_str(), GA_ReadOnly); 
-               theBigMemoryFlag = true;
-         }else{
-             theDataset = GDALOpen(theImageFile.c_str(), GA_ReadOnly); 
-             theBigMemoryFlag = false;
-         }
-         assert(theDataset != 0);
+        
+         theDataset = GDALOpen(theImageFile.c_str(), GA_ReadOnly); 
          if( theDataset == 0 )
          {
             return false;

@@ -14,4 +14,4 @@
 
 8. ossmiscalarfilter is modified.   remove null pixel.   2018.4.27
 
-9. gdaltileSource  use mmap in windows. 2018.5.1
+9. gdaltileSource  use mmap in windows;   modify imageHandler's openOverview() 2018.5.1

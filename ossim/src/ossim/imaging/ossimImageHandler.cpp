@@ -805,8 +805,9 @@ bool ossimImageHandler::openOverview(const ossimFilename& overview_file)
       // Try to open:
       // False argument to open tell the overview reader not to try to open overviews.
       //---
-      theOverview = ossimImageHandlerRegistry::instance()->open(overview_file, false);
-
+      //theOverview = ossimImageHandlerRegistry::instance()->open(overview_file, false);
+      theOverview = new ossimTiffTileSource();
+      theOverview->open(overview_file);
       if (theOverview.valid())
       {
          result = true;
