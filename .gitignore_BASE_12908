@@ -1,0 +1,9 @@
+﻿*.obj
+*.ilk
+win64
+*.pdb
+*.idb
+vsproj/ossim/ossimcore.dir/
+vsproj/ossim_all.sdf
+vsproj/ossim_plugins/gdal/ossimgdal_plugin.dir/
+vsproj/x64/

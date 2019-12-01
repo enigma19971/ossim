@@ -1,0 +1,19 @@
+﻿*.obj
+*.ilk
+*.pdb
+*.idb
+<<<<<<< HEAD
+win64
+vsproj
+vsproj
+vsproj
+vsproj
+vs2015
+vs2015-with-gdal2.0
+=======
+vsproj/ossim/ossimcore.dir/
+vsproj/ossim_all.sdf
+vsproj/ossim_plugins/gdal/ossimgdal_plugin.dir/
+vsproj/x64/
+vs2015
+>>>>>>> refs/remotes/origin/master

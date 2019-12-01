@@ -113,7 +113,7 @@ SET (FFMPEG_INCLUDE_DIR "${3RDPART_DIR}/ffmpeg_mingw/include")
 #SET(GDAL_LINK_DIR "${3RDPART_DIR}/gdal1.9/${PLATFORM}/$(Configuration)")
 #SET(GDAL_LIBRARY  gdal_i)
 SET(GDAL_INC "${3RDPART_DIR}/gdal1.11.0/include")
-SET(GDAL_LINK_DIR "${3RDPART_DIR}/gdal1.11.0/lib")
+SET(GDAL_LINK_DIR "${3RDPART_DIR}/gdal1.11.0/vs2015/$(Configuration)/lib")
 SET(GDAL_LIBRARY  gdal_i)
 
 
