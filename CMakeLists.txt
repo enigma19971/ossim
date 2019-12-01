@@ -17,7 +17,7 @@ SET(CMAKE_MODULE_PATH "${${PROJECT_NAME}_SOURCE_DIR}/ossim_package_support/cmake
 
 #set your 3rd part libraries path here
 ####################################################
-SET (3RDPART_DIR "d:/3rdPart")
+SET (3RDPART_DIR "c:/3rdPart")
 ####################################################
 
 
