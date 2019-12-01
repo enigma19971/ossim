@@ -4,8 +4,6 @@
 *.idb
 win64
 vsproj
-vsproj
-vsproj
-vsproj
 vs2015
 vs2015-with-gdal2.0
+vs2013
